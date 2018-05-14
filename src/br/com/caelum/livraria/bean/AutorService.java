@@ -19,7 +19,6 @@ public class AutorService {
     @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public void adiciona(Autor autor) {
 	dao.salva(autor);
-	throw new RuntimeException("[ERRO] Erro lançado para testar o rollback da transação");
     }
     
     public List<Autor> todosAutores() {
